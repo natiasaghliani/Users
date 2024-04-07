@@ -1,0 +1,18 @@
+<body>
+  <header>
+    <button (click)="goToHomePage()">HOME</button>
+  </header>
+  <section>
+    <div class="cards" *ngIf="client">
+      <div class="card">
+        <img [src]="client.avatar" alt="Client Image">
+        <div class="card-body">
+          <p class="card-text"><span>ID: </span> {{ client.id }}</p>
+          <h4 class="card-text"> <span>Name: </span>{{ client.first_name }}</h4>
+          <h4 class="card-text"><span>Surname: </span>{{ client.last_name }}</h4>
+          <p class="card-text"><span>Email: </span>{{ client.email }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
